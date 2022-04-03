@@ -1,10 +1,14 @@
 import React from 'react'
+import Particles from 'react-tsparticles'
+import particlesConfig from './assets/particlesjsConfig.json'
+import './App.css'
 
-function App () {
+const App = () => {
   return (
-   <div>
-     Hola
-   </div>
+  <>
+    <Particles params={particlesConfig}/>
+    <h1>hola</h1>
+  </>
   )
 }
 
