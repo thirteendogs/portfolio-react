@@ -1,12 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Roboto+Mono:wght@300&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff2e34;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #181818;
+}
+
+h1 {
+  font-family: "Roboto Mono", monospace;
+}
+
 body {
+  font-family: "Inter", sans-serif;
   background-color: #131313;
-  color: white;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  font-size: 1.5rem;
 }
 
 #root {
@@ -17,6 +55,57 @@ body {
 .particles {
   position: relative;
   z-index: -1;
+}
+
+.navbar {
+  padding-inline: 2rem;
+  width: 100%;
+  height: 120px;
+  display: flex;
+}
+.navbar__container {
+  display: inherit;
+  width: inherit;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__icon {
+  align-self: center;
+  font-size: 4rem;
+}
+.navbar__menu__icon {
+  all: unset;
+  cursor: pointer;
+  color: white;
+  font-size: 3rem;
+}
+.navbar__menu {
+  display: inherit;
+  gap: 3.5rem;
+}
+.navbar__menu__link {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.5rem;
+  color: #ff2e34;
+  font-weight: 600;
+  transition: color 500ms;
+  position: relative;
+}
+.navbar__menu__link:hover {
+  color: #fff;
+}
+.navbar__menu__link::before {
+  content: "";
+  display: block;
+  height: 0%;
+  width: 100%;
+  background-color: white;
+  top: -40px;
+  position: absolute;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+}
+.navbar__menu__link:hover::before {
+  height: 40px;
 }
 
 /*# sourceMappingURL=App.css.map */

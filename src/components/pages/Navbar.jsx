@@ -1,23 +1,21 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { VscTerminalDebian } from 'react-icons/vsc'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaWolfPackBattalion } from 'react-icons/fa'
+// import Hamburger from '../Hamburger'
 
 const Navbar = () => {
+  // eslint-disable-next-line no-unused-vars
   const [click, setClick] = useState(false)
 
-  const handleClick = () => setClick(!click)
-
   return (
-    <>
-      <div className='navbar'>
+    <header>
+      <nav className='navbar'>
         <div className='navbar__container'>
           <Link to='/' className='navbar__logo'>
-            <VscTerminalDebian className='navbar__icon' />
+            <FaWolfPackBattalion className='navbar__icon' />
           </Link>
-          <div className='navbar__menu__icon' onClick={handleClick}>
-            {click ? <FaTimes /> : <FaBars />}
-          </div>
+          {/* <Hamburger /> */}
+
           <ul className={click ? 'navbar__menu--active' : 'navbar__menu'}>
             <li className='navbar__menu__item'>
               <Link to='/about' className='navbar__menu__link'>ABOUT</Link>
@@ -32,9 +30,10 @@ const Navbar = () => {
               <Link to='/contact' className='navbar__menu__link'>CONTACT</Link>
             </li>
           </ul>
+
         </div>
-      </div>
-    </>
+      </nav>
+    </header>
   )
 }
 

@@ -1,0 +1,65 @@
+@use '../utils/variables' as *;
+
+.navbar {
+   padding-inline: 2rem;
+   width: 100%;
+   height: $header-height;
+   display: flex;
+   
+   &__container {
+      display: inherit;
+      width: inherit;
+      justify-content: space-between;
+      align-items: center;
+
+   }
+
+   &__icon {
+      align-self: center;
+      font-size: 4rem;
+   }
+
+   &__menu__icon {
+      all: unset;
+      cursor: pointer;
+      color: white;
+      font-size: 3rem;
+   }
+
+   &__menu {
+      display: inherit;
+      gap: 3.5rem;
+
+   }
+
+   &__menu__link {
+      font-family: $mono-font;
+      font-size: $font-size-md;
+      color: $red-clr;
+      font-weight: 600;
+      transition: color 500ms;
+      position: relative;
+
+      &:hover {
+         color: $white-clr;
+      }
+
+   }
+   
+   &__menu__link::before {
+      content: '';
+      display: block;
+      height: 0%;
+      width: 100%;
+      background-color: white;
+      top: -40px;
+      position: absolute;
+      transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+   }
+
+   &__menu__link:hover::before {
+      height: 40px;
+   }
+}
+
+
