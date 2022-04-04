@@ -1,9 +1,5 @@
-@import
-  'base/reset';
-
-@import
-  'layout/background';
-
-@import
-  'utils/variables'
-
+@use 'base/reset';
+@use 'layout/body';
+@use 'layout/layoutSize';
+@use 'components/particles';
+@use 'components/navbar';

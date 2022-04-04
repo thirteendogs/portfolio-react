@@ -1,0 +1,44 @@
+@use '../utils/variables' as *;
+
+html {
+   scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+   width:0.5vw;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: $red-clr;
+   border-radius: 100vw;
+}
+
+::-webkit-scrollbar-track{
+   background-color: $scrollbar-color;
+   
+}
+
+h1 {
+   font-family: $mono-font;
+}
+
+body {
+   font-family: $serif-font;
+   background-color: $dark-clr;
+   overflow-x: hidden;
+   line-height: 1.5;
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+   color: $white-clr;
+}
+
+ul {
+   list-style-type: none;
+}
+
+p {
+   font-size: 1.5rem;
+}
