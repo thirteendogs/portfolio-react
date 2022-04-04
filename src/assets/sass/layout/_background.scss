@@ -1,6 +1,6 @@
-@use '../utils/variables';
+@use '../utils/variables' as *;
 
 body {
-  background-color: variables.$dark-clr;
+  background-color: $dark-clr;
   color: white;
 }

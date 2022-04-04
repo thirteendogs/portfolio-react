@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["assets/sass/base/_reset.scss","assets/sass/layout/_background.scss","assets/sass/utils/_variables.scss"],"names":[],"mappings":"AAAA;EACG;EACA;EACA;;;ACDH;EACE,kBCQQ;EDPR","file":"App.css"}
+{"version":3,"sourceRoot":"","sources":["assets/sass/base/_reset.scss","assets/sass/layout/_background.scss","assets/sass/utils/_variables.scss","assets/sass/layout/_layoutSize.scss","assets/sass/components/_particles.scss"],"names":[],"mappings":"AAAA;EACG;EACA;EACA;;;ACDH;EACE,kBCQQ;EDPR;;;AEJF;EACG;EACA;;;ACFH;EACG;EACA","file":"App.css"}

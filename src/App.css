@@ -9,4 +9,14 @@ body {
   color: white;
 }
 
+#root {
+  max-width: 1700px;
+  margin: auto;
+}
+
+.particles {
+  position: relative;
+  z-index: -1;
+}
+
 /*# sourceMappingURL=App.css.map */
