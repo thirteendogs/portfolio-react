@@ -96,7 +96,7 @@ p {
 .navbar__menu__icon {
   display: none;
 }
-@media (max-width: 35em) {
+@media (max-width: 50em) {
   .navbar__menu {
     flex-direction: column;
     position: fixed;
