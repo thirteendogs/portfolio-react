@@ -1,11 +1,23 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaWolfPackBattalion } from 'react-icons/fa'
-// import Hamburger from '../Hamburger'
+import { FaWolfPackBattalion, FaBars, FaTimes } from 'react-icons/fa'
 
 const Navbar = () => {
-  // eslint-disable-next-line no-unused-vars
   const [click, setClick] = useState(false)
+
+  const handleNavToggle = () => {
+    setClick(!click)
+    console.log('click')
+  }
+
+  let resizeTimer
+  window.addEventListener('resize', () => {
+    document.body.classList.add('resize-animation-stopper')
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout(() => {
+      document.body.classList.remove('resize-animation-stopper')
+    }, 400)
+  })
 
   return (
     <header>
@@ -14,9 +26,12 @@ const Navbar = () => {
           <Link to='/' className='navbar__logo'>
             <FaWolfPackBattalion className='navbar__icon' />
           </Link>
-          {/* <Hamburger /> */}
 
-          <ul className={click ? 'navbar__menu--active' : 'navbar__menu'}>
+          <button className='navbar__menu__icon' onClick={handleNavToggle}>
+            {click ? <FaTimes /> : <FaBars />}
+          </button>
+
+          <ul className='navbar__menu' data-visible={click ? 'true' : 'false'}>
             <li className='navbar__menu__item'>
               <Link to='/about' className='navbar__menu__link'>ABOUT</Link>
             </li>

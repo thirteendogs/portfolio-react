@@ -30,6 +30,36 @@
       display: inherit;
       gap: 3.5rem;
 
+      &__icon {
+         display: none;
+      }      
+      
+   }
+
+   @media (max-width: 35em) {
+      &__menu {
+         flex-direction: column;
+         position: fixed;
+         inset: 0 0 0 30%;
+         background-color: $dark-clr;
+         place-content: center;
+         transform: translateX(100%);
+         transition: transform 350ms;
+
+         &__item {
+            align-self: center;
+         }
+
+         &__icon {
+            display: block;
+            position: relative;
+            z-index: 1;
+         }
+      }
+
+      &__menu[data-visible='true'] {
+         transform: translateX(0);
+      }
    }
 
    &__menu__link {
