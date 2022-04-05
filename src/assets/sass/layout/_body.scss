@@ -42,3 +42,8 @@ ul {
 p {
    font-size: 1.5rem;
 }
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
