@@ -1,17 +1,22 @@
 @use '../utils/variables' as *;
 
 .navbar {
-   padding-inline: 2rem;
+   overflow: hidden;
    width: 100%;
    height: $header-height;
    display: flex;
+   align-items: center;
+   justify-content: center;
+   
    
    &__container {
+      padding-inline: 2rem;
+      max-width: $content-max-width;
+      position: fixed;
       display: inherit;
       width: inherit;
       justify-content: space-between;
       align-items: center;
-
    }
 
    &__icon {
@@ -36,7 +41,7 @@
       
    }
 
-   @media (max-width: 35em) {
+   @media (max-width: 50em) {
       &__menu {
          flex-direction: column;
          position: fixed;
