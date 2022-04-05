@@ -1,17 +1,22 @@
 @use '../utils/variables' as *;
 
 .navbar {
-   padding-inline: 2rem;
+   overflow: hidden;
    width: 100%;
    height: $header-height;
    display: flex;
+   align-items: center;
+   justify-content: center;
+   
    
    &__container {
+      padding-inline: 2rem;
+      max-width: 1600px;
+      position: fixed;
       display: inherit;
       width: inherit;
       justify-content: space-between;
       align-items: center;
-
    }
 
    &__icon {
