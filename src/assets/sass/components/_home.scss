@@ -1,0 +1,53 @@
+@use '../utils/variables' as *;
+
+.home {
+   display: grid;
+   place-content: center;
+   height: 65vh;
+   padding-inline: 2rem;
+}
+
+.home__firstlinetitle {
+   color: $red-clr;
+   font-size: 1rem;
+   font-family: $mono-font;
+   font-weight: bold;
+}
+.home__secondlinetitle {
+   color: $white-clr; 
+   font-size: 4rem;
+}
+.home__thirthlinetitle {
+   color: $grey-clr;
+   font-size: 4rem;
+}
+.home__fourthlinetitle {
+   color: $white-clr; 
+}
+
+
+/*
+BREACKPOINTS
+910px with 
+*/
+
+@media screen and (max-width: 910px) {
+   .home__secondlinetitle {
+      font-size: 3rem;
+   }
+   .home__thirthlinetitle {
+      font-size: 3rem;
+   }
+} 
+
+@media screen and (max-width: 700px) {
+   .home__secondlinetitle {
+      font-size: 2rem;
+   }
+   .home__thirthlinetitle {
+      font-size: 2rem;
+   }
+   .home__fourthlinetitle {
+      font-size: 1rem;
+   }
+} 

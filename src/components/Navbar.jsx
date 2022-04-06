@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className='navbar'>
+      <nav aria-label='Main navigation' className='navbar'>
         <div className='navbar__container'>
           <Link to='/' className='navbar__logo'>
             <FaWolfPackBattalion className='navbar__icon' />
