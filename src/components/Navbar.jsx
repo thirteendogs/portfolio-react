@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { FaWolfPackBattalion, FaBars, FaTimes } from 'react-icons/fa'
 
 const Navbar = () => {
@@ -7,42 +6,33 @@ const Navbar = () => {
 
   const handleNavToggle = () => {
     setClick(!click)
-    console.log('click')
   }
 
-  let resizeTimer
-  window.addEventListener('resize', () => {
-    document.body.classList.add('resize-animation-stopper')
-    clearTimeout(resizeTimer)
-    resizeTimer = setTimeout(() => {
-      document.body.classList.remove('resize-animation-stopper')
-    }, 400)
-  })
-
   return (
-    <header>
+    <header id='home-page'>
       <nav aria-label='Main navigation' className='navbar'>
         <div className='navbar__container'>
-          <Link to='/' className='navbar__logo'>
-            <FaWolfPackBattalion className='navbar__icon' />
-          </Link>
 
-          <button className='navbar__menu__icon' onClick={handleNavToggle}>
+          <a href='#home-page' className='navbar__logo'>
+            <FaWolfPackBattalion className='navbar__icon' />
+          </a>
+
+          <button title='hamburger' className='navbar__menu__icon' onClick={handleNavToggle}>
             {click ? <FaTimes /> : <FaBars />}
           </button>
 
           <ul className='navbar__menu' data-visible={click ? 'true' : 'false'}>
             <li className='navbar__menu__item'>
-              <Link to='/about' className='navbar__menu__link'>ABOUT</Link>
+              <a href='#about-page' className='navbar__menu__link'>ABOUT</a>
             </li>
             <li className='navbar__menu__item'>
-              <Link to='/projects' className='navbar__menu__link'>PROJECTS</Link>
+              <a href='#projects-page' className='navbar__menu__link'>PROJECTS</a>
             </li>
             <li className='navbar__menu__item'>
-              <Link to='/work' className='navbar__menu__link'>WORK</Link>
+              <a href='#work-page' className='navbar__menu__link'>WORK</a>
             </li>
             <li className='navbar__menu__item'>
-              <Link to='/contact' className='navbar__menu__link'>CONTACT</Link>
+              <a href='#contact-page' className='navbar__menu__link'>CONTACT</a>
             </li>
           </ul>
 

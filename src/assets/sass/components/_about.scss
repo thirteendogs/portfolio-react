@@ -1,0 +1,57 @@
+@use '../utils/variables' as *;
+
+
+.about {
+   height: 100vh;
+   margin-top: 3rem;
+   padding: 2rem;
+   display: flex;
+   place-content: center;
+   place-items: center;
+
+   &__text {
+      max-width: 37.5em;
+      margin-right: 5em;
+   }
+
+   &__title {
+      font-family: $mono-font;
+      padding-bottom: 2rem;
+      font-size: 2em;
+      color: $red-clr;
+   }
+
+   &__paragraph {
+      font-size: $font-size-text;
+      font-weight: 400;
+      color:$grey-clr;
+      margin-bottom: 1rem;
+   }
+
+   &__company {
+      color: $red-clr;
+   }
+
+   &__photo {
+      z-index: -1;
+      img {
+         width: 400px;
+         height: 400px;
+         clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+         border: 3px solid $red-clr;
+
+      }      
+   }
+}
+
+@media(max-width: 1150px) {
+   .about {
+      flex-direction: column;
+
+      &__text {
+         margin:0 0 2em 0;
+      }
+   }
+}
+
+            
