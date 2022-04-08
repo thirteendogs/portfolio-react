@@ -6,17 +6,7 @@ const Navbar = () => {
 
   const handleNavToggle = () => {
     setClick(!click)
-    console.log('click')
   }
-
-  let resizeTimer
-  window.addEventListener('resize', () => {
-    document.body.classList.add('resize-animation-stopper')
-    clearTimeout(resizeTimer)
-    resizeTimer = setTimeout(() => {
-      document.body.classList.remove('resize-animation-stopper')
-    }, 400)
-  })
 
   return (
     <header id='home-page'>
@@ -27,7 +17,7 @@ const Navbar = () => {
             <FaWolfPackBattalion className='navbar__icon' />
           </a>
 
-          <button className='navbar__menu__icon' onClick={handleNavToggle}>
+          <button title='hamburger' className='navbar__menu__icon' onClick={handleNavToggle}>
             {click ? <FaTimes /> : <FaBars />}
           </button>
 
