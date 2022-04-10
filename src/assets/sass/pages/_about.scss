@@ -3,7 +3,6 @@
 
 .about {
    height: 100vh;
-   margin-top: 3rem;
    padding: 2rem;
    display: flex;
    place-content: center;
@@ -47,9 +46,21 @@
 @media(max-width: 1150px) {
    .about {
       flex-direction: column;
-
+      height: 100%;
       &__text {
          margin:0 0 2em 0;
+      }
+   }
+}
+
+@media(max-width: 500px) {
+   .about {
+
+      &__photo {
+         img {
+            width: 250px;
+            height: 250px;
+         }      
       }
    }
 }

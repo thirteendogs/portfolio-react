@@ -5,6 +5,7 @@ import './App.css'
 import Home from './components/pages/Home'
 import Navbar from './components/Navbar'
 import About from './components/pages/About'
+import Projects from './components/pages/Projects'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <main>
         <Home />
         <About />
+        <Projects />
       </main>
     </>
   )

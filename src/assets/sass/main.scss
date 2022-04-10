@@ -1,9 +1,12 @@
 @use 'base/reset';
 @use 'layout/body';
 @use 'layout/layoutSize';
+
 @use 'components/particles';
 @use 'components/navbar';
-@use 'components/home';
 @use 'components/button';
 @use 'components/circular-button';
-@use 'components/about';
+
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/projects'
