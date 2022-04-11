@@ -5,7 +5,6 @@ import imgFeedback from '../../assets/img/feedback.jpg'
 
 const Projects = () => {
   return (
-   <>
       <section id='projects-page' className='projects'>
          <h1 className='projects__title'>My projects</h1>
 
@@ -86,7 +85,6 @@ const Projects = () => {
             </div>
          </div>
       </section>
-   </>
   )
 }
 
