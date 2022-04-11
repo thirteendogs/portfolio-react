@@ -1,0 +1,67 @@
+@use '../utils/variables' as *;
+
+.work {
+   height: 100vh;
+   padding: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   color: $white-clr;
+
+   &__title {
+      font-family: $mono-font;
+      color: $red-clr;
+      font-size: 2rem;
+      margin-bottom: 4rem;
+   }
+
+   &__container {
+      background-color: $dark-clr;
+      border-bottom: 2px $red-clr solid;
+      border-left: 2px $red-clr solid;
+      width: 750px;
+      height: 260px;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+
+      h3 {
+         font-size: 1.5rem;
+      }
+   }
+
+   &__description {
+      color: $grey-clr;
+   }
+
+   &__tech {
+      font-size: 3rem;
+      
+      i {
+         margin-right: 3rem;
+
+      }
+   }
+}
+
+@media (max-width: 800px) {
+   .work__container {
+      width: 500px;
+      height: 300px;
+   }
+}
+@media (max-width: 500px) {
+   .work {
+      &__container {
+         width: 320px;
+         height: 250px;
+      }
+      &__description {
+         font-size: 1rem;
+      }
+      &__tech {
+         font-size: 1.5rem;
+      }
+   }
+
+}

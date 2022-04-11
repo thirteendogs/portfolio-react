@@ -464,5 +464,60 @@ BREACKPOINTS
     width: 250px;
   }
 }
+.work {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.work__title {
+  font-family: "Roboto Mono", monospace;
+  color: #ff2e34;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+.work__container {
+  background-color: #131313;
+  border-bottom: 2px #ff2e34 solid;
+  border-left: 2px #ff2e34 solid;
+  width: 750px;
+  height: 260px;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.work__container h3 {
+  font-size: 1.5rem;
+}
+.work__description {
+  color: rgb(160, 157, 157);
+}
+.work__tech {
+  font-size: 3rem;
+}
+.work__tech i {
+  margin-right: 3rem;
+}
+
+@media (max-width: 800px) {
+  .work__container {
+    width: 500px;
+    height: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .work__container {
+    width: 320px;
+    height: 250px;
+  }
+  .work__description {
+    font-size: 1rem;
+  }
+  .work__tech {
+    font-size: 1.5rem;
+  }
+}
 
 /*# sourceMappingURL=App.css.map */

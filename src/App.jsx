@@ -6,6 +6,7 @@ import Home from './components/pages/Home'
 import Navbar from './components/Navbar'
 import About from './components/pages/About'
 import Projects from './components/pages/Projects'
+import Work from './components/pages/Work'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Home />
         <About />
         <Projects />
+        <Work />
       </main>
     </>
   )
