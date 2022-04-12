@@ -219,6 +219,19 @@ p {
     display: none;
   }
 }
+.footer {
+  width: 100%;
+  display: flex;
+  place-content: center;
+}
+.footer__text {
+  padding-bottom: 2rem;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 .home {
   display: grid;
   place-content: center;

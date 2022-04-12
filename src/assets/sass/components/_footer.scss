@@ -1,0 +1,15 @@
+@use '../utils/variables' as *;
+
+.footer {
+   width: 100%;
+   display: flex;
+   place-content: center;
+
+   &__text {
+      padding-bottom: 2rem;
+      color: $white-clr;
+      font-family: $mono-font;
+      font-weight: bold;
+      font-size: 1rem;
+   }
+}
