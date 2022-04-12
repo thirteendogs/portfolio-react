@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import About from './components/pages/About'
 import Projects from './components/pages/Projects'
 import Work from './components/pages/Work'
+import Contact from './components/pages/Contact'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <About />
         <Projects />
         <Work />
+        <Contact />
       </main>
     </>
   )
