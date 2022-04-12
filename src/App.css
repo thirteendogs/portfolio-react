@@ -519,5 +519,87 @@ BREACKPOINTS
     font-size: 1.5rem;
   }
 }
+.contact {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.contact__container {
+  width: 900px;
+  height: 500px;
+  margin-inline: 2rem;
+}
+.contact__title {
+  color: #ff2e34;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  transform: translateY(-40px);
+}
+.contact__title::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -23px;
+  right: -300px;
+  width: 240px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: white;
+}
+.contact__form label {
+  font-size: 1.5rem;
+}
+.contact__form form {
+  border-left: 2px #ff2e34 solid;
+  padding-left: 1rem;
+}
+.contact__form__text__input {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  height: 50px;
+  width: 800px;
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+.contact__form__textarea__input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 800px;
+  height: 150px;
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .contact__container {
+    width: 600px;
+  }
+  .contact__form__text__input {
+    width: 550px;
+  }
+  .contact__form__textarea__input {
+    width: 550px;
+  }
+}
+@media (max-width: 650px) {
+  .contact__container {
+    width: 350px;
+  }
+  .contact__title::after {
+    display: none;
+  }
+  .contact__form__text__input {
+    width: 300px;
+  }
+  .contact__form__textarea__input {
+    width: 300px;
+  }
+}
 
 /*# sourceMappingURL=App.css.map */
