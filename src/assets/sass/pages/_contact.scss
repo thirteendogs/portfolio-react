@@ -1,1 +1,109 @@
 @use '../utils/variables' as *;
+
+.contact {
+   height: 100vh;
+   padding: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   color: $white-clr;
+
+   &__container {
+      width: 900px;
+      height: 500px;  
+      margin-inline: 2rem;
+   }
+
+   &__title {
+      color: $red-clr;
+      font-size: 2rem;
+      font-family: $mono-font;
+      transform: translateY(-40px);
+
+      &::after {
+         content: "";
+         display: block;
+         position: relative;
+         top: -23px;
+         right: -300px;
+         width: 240px;
+         height: 1px;
+         margin-left: 20px;
+         background-color: white;
+      }
+   }
+
+   &__form {
+      label {
+         font-size: 1.5rem;
+      }
+
+      form {
+         border-left: 2px $red-clr solid;
+         padding-left: 1rem;
+      }
+
+      &__text__input {
+         margin-bottom: 1rem;
+         padding-left: 0.5rem;
+         height: 50px;
+         width: 800px;
+         font-size: 1.2rem;
+         font-family: $serif-font;
+         font-weight: 900;
+      }
+
+      &__textarea__input {
+         margin-bottom: 1rem;
+         padding: 0.5rem ;
+         width: 800px;
+         height: 150px;
+         font-size: 1.2rem;
+         font-family: $serif-font;
+         font-weight: 900;
+      }
+   }
+}
+
+@media (max-width: 900px) {
+   .contact {
+
+      &__container {
+         width: 600px;
+      }
+      &__form {
+         &__text__input {
+            width: 550px;
+         }
+         &__textarea__input {
+            width: 550px;
+         }
+      }
+   }
+   
+}
+@media (max-width: 650px) {
+   .contact {
+
+      &__container {
+         width: 350px;
+      }
+
+      &__title {
+
+         &::after {
+            display: none
+         }
+      }
+
+      &__form {
+         &__text__input {
+            width: 300px;
+         }
+         &__textarea__input {
+            width: 300px;
+         }
+      }
+   }
+}
