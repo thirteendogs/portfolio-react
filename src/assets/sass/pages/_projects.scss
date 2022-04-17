@@ -21,6 +21,8 @@
       display: inherit;
       flex-direction: row;
           justify-content: space-between;
+      position: relative;
+      z-index: 1;
    }
 
    &__project__individualBox {
@@ -132,6 +134,8 @@
          position: relative;
          height: 70px;
          width: 450px;
+         position: relative;
+         z-index: -1;
 
          i {
             font-size: 2.5rem;
@@ -148,6 +152,11 @@
 @media screen and (max-width: 1400px) {
    .projects {
       height: 100%;
+
+      &__title {
+         margin-top: 5rem;
+         font-size: 1.5rem;
+      }
    
       &__container {
          flex-direction: column;

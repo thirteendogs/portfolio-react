@@ -55,7 +55,24 @@
 
 @media(max-width: 500px) {
    .about {
+      height: 100%;
 
+      &__text {
+         margin-top: 5rem;
+      }
+
+      &__title {
+         font-family: $mono-font;
+         padding-bottom: 2rem;
+         font-size: 1.5rem;
+         color: $red-clr;
+      }
+      &__paragraph {
+         font-size: 1.1rem;
+         font-weight: 400;
+         color:$grey-clr;
+         margin-bottom: 1rem;
+      }
       &__photo {
          img {
             width: 250px;
