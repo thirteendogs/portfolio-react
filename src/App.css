@@ -66,6 +66,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 .navbar__container {
   padding-inline: 2rem;
@@ -286,6 +288,12 @@ BREACKPOINTS
     font-size: 1rem;
   }
 }
+@media (max-width: 500px) {
+  .home {
+    height: 70vh;
+    margin-bottom: 5rem;
+  }
+}
 .about {
   height: 100vh;
   padding: 2rem;
@@ -332,6 +340,24 @@ BREACKPOINTS
   }
 }
 @media (max-width: 500px) {
+  .about {
+    height: 100%;
+  }
+  .about__text {
+    margin-top: 5rem;
+  }
+  .about__title {
+    font-family: "Roboto Mono", monospace;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #ff2e34;
+  }
+  .about__paragraph {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(160, 157, 157);
+    margin-bottom: 1rem;
+  }
   .about__photo img {
     width: 250px;
     height: 250px;
@@ -356,6 +382,8 @@ BREACKPOINTS
   display: inherit;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 .projects__project__individualBox {
   height: 450px;
@@ -446,6 +474,8 @@ BREACKPOINTS
   position: relative;
   height: 70px;
   width: 450px;
+  position: relative;
+  z-index: -1;
 }
 .projects__tech__container__item i {
   font-size: 2.5rem;
@@ -458,6 +488,10 @@ BREACKPOINTS
 @media screen and (max-width: 1400px) {
   .projects {
     height: 100%;
+  }
+  .projects__title {
+    margin-top: 5rem;
+    font-size: 1.5rem;
   }
   .projects__container {
     flex-direction: column;
@@ -521,6 +555,11 @@ BREACKPOINTS
   }
 }
 @media (max-width: 500px) {
+  .work__title {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
   .work__container {
     width: 320px;
     height: 250px;
@@ -542,9 +581,12 @@ BREACKPOINTS
   color: #fff;
 }
 .contact__container {
-  width: 900px;
+  width: 750px;
   height: 500px;
   margin-inline: 2rem;
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
 }
 .contact__title {
   color: #ff2e34;
@@ -558,10 +600,25 @@ BREACKPOINTS
   position: relative;
   top: -23px;
   right: -300px;
-  width: 240px;
+  width: 150px;
   height: 1px;
   margin-left: 20px;
   background-color: white;
+}
+.contact__title::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 26px;
+  right: 205px;
+  width: 150px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: white;
+}
+.contact__form {
+  display: flex;
+  justify-content: center;
 }
 .contact__form label {
   font-size: 1.5rem;
@@ -574,7 +631,7 @@ BREACKPOINTS
   margin-bottom: 1rem;
   padding-left: 0.5rem;
   height: 50px;
-  width: 800px;
+  width: 750px;
   font-size: 1.2rem;
   font-family: "Inter", sans-serif;
   font-weight: 900;
@@ -582,7 +639,7 @@ BREACKPOINTS
 .contact__form__textarea__input {
   margin-bottom: 1rem;
   padding: 0.5rem;
-  width: 800px;
+  width: 750px;
   height: 150px;
   font-size: 1.2rem;
   font-family: "Inter", sans-serif;
@@ -590,28 +647,48 @@ BREACKPOINTS
 }
 
 @media (max-width: 900px) {
+  .contact {
+    height: 100%;
+    min-height: 80vh;
+  }
+  .contact__title {
+    border-bottom: 1px #fff solid;
+  }
+  .contact__title::before {
+    display: none;
+  }
+  .contact__title::after {
+    display: none;
+  }
   .contact__container {
-    width: 600px;
+    width: 500px;
   }
   .contact__form__text__input {
-    width: 550px;
+    width: 500px;
   }
   .contact__form__textarea__input {
-    width: 550px;
+    width: 500px;
   }
 }
 @media (max-width: 650px) {
   .contact__container {
     width: 350px;
   }
+  .contact__title {
+    font-size: 1.5rem;
+  }
   .contact__title::after {
     display: none;
   }
   .contact__form__text__input {
+    height: 2rem;
     width: 300px;
   }
   .contact__form__textarea__input {
     width: 300px;
+  }
+  .contact__form label {
+    font-size: 1rem;
   }
 }
 

@@ -10,9 +10,12 @@
    color: $white-clr;
 
    &__container {
-      width: 900px;
+      width: 750px;
       height: 500px;  
       margin-inline: 2rem;
+      display: inherit;
+      flex-direction: column;
+      align-items: center;
    }
 
    &__title {
@@ -27,7 +30,19 @@
          position: relative;
          top: -23px;
          right: -300px;
-         width: 240px;
+         width: 150px;
+         height: 1px;
+         margin-left: 20px;
+         background-color: white;
+      }
+
+      &::before {
+         content: "";
+         display: block;
+         position: relative;
+         top: 26px;
+         right: 205px;
+         width: 150px;
          height: 1px;
          margin-left: 20px;
          background-color: white;
@@ -35,6 +50,9 @@
    }
 
    &__form {
+      display: flex;
+      justify-content: center;
+
       label {
          font-size: 1.5rem;
       }
@@ -48,7 +66,7 @@
          margin-bottom: 1rem;
          padding-left: 0.5rem;
          height: 50px;
-         width: 800px;
+         width: 750px;
          font-size: 1.2rem;
          font-family: $serif-font;
          font-weight: 900;
@@ -57,7 +75,7 @@
       &__textarea__input {
          margin-bottom: 1rem;
          padding: 0.5rem ;
-         width: 800px;
+         width: 750px;
          height: 150px;
          font-size: 1.2rem;
          font-family: $serif-font;
@@ -68,16 +86,32 @@
 
 @media (max-width: 900px) {
    .contact {
+      height: 100%;
+      min-height: 80vh;
+
+      &__title {
+         &::before {
+            display: none;
+         }
+
+         &::after {
+            display: none;
+         }
+
+         border-bottom: 1px $white-clr solid;
+
+      }
 
       &__container {
-         width: 600px;
+         width: 500px;
       }
+      
       &__form {
          &__text__input {
-            width: 550px;
+            width: 500px;
          }
          &__textarea__input {
-            width: 550px;
+            width: 500px;
          }
       }
    }
@@ -91,7 +125,7 @@
       }
 
       &__title {
-
+         font-size: 1.5rem;
          &::after {
             display: none
          }
@@ -99,10 +133,14 @@
 
       &__form {
          &__text__input {
+            height: 2rem;
             width: 300px;
          }
          &__textarea__input {
             width: 300px;
+         }
+         label {
+            font-size: 1rem;
          }
       }
    }

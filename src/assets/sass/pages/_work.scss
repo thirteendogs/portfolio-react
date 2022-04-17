@@ -52,6 +52,11 @@
 }
 @media (max-width: 500px) {
    .work {
+      &__title {
+         margin-top: 1rem;
+         margin-bottom: 3rem;
+         font-size: 1.5rem;
+      }
       &__container {
          width: 320px;
          height: 250px;
