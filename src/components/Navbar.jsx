@@ -3,6 +3,20 @@ import { FaWolfPackBattalion, FaBars, FaTimes } from 'react-icons/fa'
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
+  const [show, setShow] = useState(true)
+
+  let prevScrollpos = window.pageYOffset
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset
+    if (prevScrollpos > currentScrollPos) {
+      setShow(true)
+      setClick(false)
+    } else {
+      setShow(false)
+      setClick(false)
+    }
+    prevScrollpos = currentScrollPos
+  }
 
   const handleNavToggle = () => {
     setClick(!click)
@@ -11,7 +25,8 @@ const Navbar = () => {
   return (
     <header id='home-page'>
       <nav aria-label='Main navigation' className='navbar'>
-        <div className='navbar__container'>
+
+        <div className={`navbar__container ${show ? 'visible' : 'notvisible'}`}>
 
           <a href='#home-page' className='navbar__logo'>
             <FaWolfPackBattalion className='navbar__icon' />
@@ -37,6 +52,7 @@ const Navbar = () => {
           </ul>
 
         </div>
+
       </nav>
     </header>
   )
