@@ -9,10 +9,12 @@ import Projects from './components/pages/Projects'
 import Work from './components/pages/Work'
 import Contact from './components/pages/Contact'
 import Footer from './components/Footer'
+import Intro from './components/Intro'
 
 const App = () => {
   return (
     <>
+      <Intro />
       <Particles params={particlesConfig} className='particles' />
       <Navbar />
       <main>
