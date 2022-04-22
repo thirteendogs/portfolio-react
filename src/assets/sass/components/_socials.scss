@@ -1,0 +1,90 @@
+@use '../utils/variables' as *;
+
+.side__nav__right {
+      position: fixed;
+      margin-right: 2rem;
+      bottom: 0;
+      right: 0;
+
+      a {
+         font-size: 2rem;
+         cursor: pointer;
+         transition: color 750ms;
+
+         &:hover {
+            color: $red-clr;
+         }
+      }
+
+
+      ul::after {
+         content: "";
+         display: block;
+         width: 1px;
+         height: 150px;
+         margin-inline: auto;
+         margin-top: 2.5rem;
+         background-color: white;
+      }
+
+      li {
+         transition: transform 500ms;
+         &:hover {
+            transform: translateY(-15%);
+         }
+      }
+   }
+
+   .side__nav__left {
+      margin-left: 2rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+
+      &__line {
+         a {
+            font-family: $mono-font;
+            font-size: 1rem;
+            cursor: pointer;
+            writing-mode: vertical-lr;
+            transition: color 500ms, transform 250ms;
+
+            &:hover {
+               color: $red-clr;
+               transform: translateY(-1.5%);
+            }
+         }
+
+         &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 150px;
+            margin-inline: auto;
+            margin-top: 2.5rem;
+            background-color: white;
+         }
+      }
+
+   }
+
+
+@media(max-width: 1000px)  {
+   .side__nav__right {
+      display: none;
+   }
+
+   .side__nav__left {
+      display: none;
+   }
+ }
+
+@media(max-height: 400px) {
+   .side__nav__right {
+      display: none;
+}
+
+   .side__nav__left {
+      display: none;
+   }
+}
