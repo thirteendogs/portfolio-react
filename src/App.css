@@ -406,32 +406,41 @@ p {
   height: 70vh;
   padding-inline: 2rem;
 }
-
 .home__firstlinetitle {
   color: #ff2e34;
   font-size: 1rem;
   font-family: "Roboto Mono", monospace;
   font-weight: bold;
 }
-
 .home__secondlinetitle {
   color: #fff;
   font-size: 4rem;
 }
-
 .home__thirthlinetitle {
   color: rgb(160, 157, 157);
   font-size: 4rem;
 }
-
 .home__fourthlinetitle {
   color: #fff;
 }
+.home__socials__link {
+  display: none;
+}
 
-/*
-BREACKPOINTS
-910px with 
-*/
+@media screen and (max-width: 1000px) {
+  .home__socials__resume {
+    margin-right: 2rem;
+  }
+  .home__socials__link {
+    margin-top: 1rem;
+    width: 100px;
+    display: flex;
+    font-size: 2rem;
+  }
+  .home__socials__link li {
+    padding-right: 1rem;
+  }
+}
 @media screen and (max-width: 910px) {
   .home__secondlinetitle {
     font-size: 3rem;
