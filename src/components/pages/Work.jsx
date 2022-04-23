@@ -32,6 +32,9 @@ const Work = () => {
                   className="fab fa-java"></i>
             </div>
          </div>
+         <div className='button__setup work__button'>
+            <a className='button' href='#contact-page' />
+         </div>
     </section>
 
   )

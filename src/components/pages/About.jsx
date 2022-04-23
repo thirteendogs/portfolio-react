@@ -21,6 +21,9 @@ const About = () => {
         <img src={Photo} alt='Photo of me, Daniel Nova Girbau' />
       </picture>
       </div>
+      <div className='button__setup'>
+        <a className='button' href='#projects-page' />
+      </div>
     </section>
   )
 }

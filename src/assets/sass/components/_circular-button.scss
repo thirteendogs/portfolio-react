@@ -6,6 +6,8 @@
    margin-bottom: 1rem;
    justify-content: center;
    align-content: center;
+   position: relative;
+   bottom: 0%;
 }
 
 .button {
@@ -47,6 +49,45 @@
    animation: pulse 500ms infinite; 
  }
 
+ .button__start {
+  height: 60px;
+  width: 60px;
+}
+
+ .button__start::before,
+ .button__start::after {
+   height: 60px;
+   width: 60px;
+   content: '';
+   position: absolute;
+   margin: auto;
+   border-radius: 50%;
+ }
+
+ .button__start::before {
+   content: "\f102";
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   font-size: 1.5rem;
+   color: $white-clr;
+   background-color: $red-clr;
+   display: grid;
+   place-items: center;
+   z-index: -1; 
+   
+ }
+
+ .button__start::after {
+   background-color: $red-clr;
+   z-index: -2;
+   animation: pulse 1200ms infinite; 
+   
+ }
+
+ .button__start:hover::after {
+   animation: pulse 500ms infinite; 
+ }
+
  @keyframes pulse {
    0% {
      transform: scale(0.95);
@@ -59,7 +100,7 @@
  }
 
  
-@media(max-width: 500px) {
+@media(max-width: 1250px) {
   .button__setup {
     display: none;
   }
