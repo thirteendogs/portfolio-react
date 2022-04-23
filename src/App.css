@@ -72,7 +72,7 @@ p {
 }
 .navbar__container {
   padding-inline: 2rem;
-  max-width: 1600px;
+  max-width: 1700px;
   position: fixed;
   display: inherit;
   width: inherit;
@@ -180,6 +180,8 @@ p {
   margin-bottom: 1rem;
   justify-content: center;
   align-content: center;
+  position: relative;
+  bottom: 0%;
 }
 
 .button {
@@ -219,6 +221,43 @@ p {
   animation: pulse 500ms infinite;
 }
 
+.button__start {
+  height: 60px;
+  width: 60px;
+}
+
+.button__start::before,
+.button__start::after {
+  height: 60px;
+  width: 60px;
+  content: "";
+  position: absolute;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.button__start::before {
+  content: "\f102";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #ff2e34;
+  display: grid;
+  place-items: center;
+  z-index: -1;
+}
+
+.button__start::after {
+  background-color: #ff2e34;
+  z-index: -2;
+  animation: pulse 1200ms infinite;
+}
+
+.button__start:hover::after {
+  animation: pulse 500ms infinite;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(0.95);
@@ -229,7 +268,7 @@ p {
     opacity: 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 1250px) {
   .button__setup {
     display: none;
   }
@@ -382,7 +421,7 @@ p {
   background-color: white;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
   .side__nav__right {
     display: none;
   }
@@ -427,7 +466,7 @@ p {
   display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
   .home__socials__resume {
     margin-right: 2rem;
   }
@@ -520,6 +559,10 @@ p {
   height: 400px;
   clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
   border: 3px solid #ff2e34;
+}
+
+.button__setup {
+  top: 10%;
 }
 
 @media (max-width: 1150px) {
@@ -713,6 +756,9 @@ p {
 .projects__tech__container__item img {
   margin: 0 2rem 0 2rem;
 }
+.projects__button {
+  top: 5%;
+}
 
 @media screen and (max-width: 1400px) {
   .projects {
@@ -812,6 +858,9 @@ p {
 }
 .work__tech i {
   margin-right: 3rem;
+}
+.work__button {
+  top: 0%;
 }
 
 @media (max-width: 800px) {

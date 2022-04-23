@@ -25,7 +25,10 @@ const Contact = () => {
                <button type="submit" className="btn">Send</button>
             </form>
           </div>
-       </div>
+        </div>
+        <div className='button__setup contact__button'>
+          <a className='button__start' href='#home-page' />
+        </div>
     </section>
   )
 }

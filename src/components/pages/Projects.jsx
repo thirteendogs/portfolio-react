@@ -84,6 +84,9 @@ const Projects = () => {
                </article>
             </div>
          </div>
+         <div className='button__setup projects__button'>
+            <a className='button' href='#work-page' />
+         </div>
       </section>
   )
 }
