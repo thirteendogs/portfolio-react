@@ -1,7 +1,7 @@
 import React from 'react'
-import imgMarketPlace from './houseMarketplace.jpg'
-import imgGitHub from './githubFinder.jpg'
-import imgFeedback from './feedback.jpg'
+import imgMarketPlace from '../../images/houseMarketplace.jpg'
+import imgGitHub from '../../images/githubFinder.jpg'
+import imgFeedback from '../../images/feedback.jpg'
 
 const Projects = () => {
   return (
