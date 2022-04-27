@@ -25,7 +25,7 @@ const Home = () => {
 
         </div>
       </div>
-      <div className='button__setup'>
+      <div className='button__setup home__button'>
         <a className='button' href='#about-page' />
       </div>
     </section>

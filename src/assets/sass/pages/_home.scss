@@ -52,6 +52,15 @@
             }
          }
       }
+      &__button {
+         width: 100%;
+         display: flex;
+         margin-bottom: 1rem;
+         justify-content: center;
+         align-content: center;
+         position: relative;
+         bottom: 0%;
+      }
    }
 }
 
@@ -79,6 +88,5 @@
 @media (max-width: 500px) {
    .home {
       height: 70vh;
-      margin-bottom: 5rem;
    }
 }
