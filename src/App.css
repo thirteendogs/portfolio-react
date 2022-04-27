@@ -490,8 +490,7 @@ p {
     margin-bottom: 1rem;
     justify-content: center;
     align-content: center;
-    position: relative;
-    bottom: 0%;
+    transform: translateY(-120%);
   }
 }
 @media screen and (max-width: 910px) {
