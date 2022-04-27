@@ -8,9 +8,21 @@
    left: 0;
    height: 100vh;
    background-color: black;
-   transition: 5s; 
+   animation: intro 3s forwards; 
+   animation-delay: 3s;
    display: grid;
    place-content: center;
+
+     @keyframes intro {
+        from {
+           top:0;
+        }
+
+        to {
+           top:-100vh;
+
+        }
+     }
 
    &__box__one {
       position: absolute; 
@@ -37,8 +49,8 @@
       }
 
       100% {
-            border-radius: 50%;
-            transform: rotate(180deg);
+         border-radius: 50%;
+         transform: rotate(180deg);
 
       }
    }
@@ -93,7 +105,5 @@
    }   
 }
 
-[data-show='false'] {
-   transform: translateY(-300%);
-}
+
 

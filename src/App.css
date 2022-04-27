@@ -294,9 +294,18 @@ p {
   left: 0;
   height: 100vh;
   background-color: black;
-  transition: 5s;
+  animation: intro 3s forwards;
+  animation-delay: 3s;
   display: grid;
   place-content: center;
+}
+@keyframes intro {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100vh;
+  }
 }
 .intro__box__one {
   position: absolute;
@@ -358,10 +367,6 @@ p {
     opacity: 100%;
     transform: scale(1.1);
   }
-}
-
-[data-show=false] {
-  transform: translateY(-300%);
 }
 
 .side__nav__right {
